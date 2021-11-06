@@ -12,7 +12,6 @@ def main():
 #################################
 
 
-
 def menu():
     print()
 
@@ -22,12 +21,13 @@ def menu():
     print()
 
     choice = input("""
-                      1: Pizza system 
-                      2: Average calc
-                      3: Area calc
-                      Q: Logout
+      1: Pizza system 
+      2: Average calc
+      3: Area calc
+      4: Numbers above 70
+      Q: Logout
 
-                      Please enter your choice: """)
+   Please enter your choice: """)
 
     if choice == "1" or choice =="١":
         pizza()
@@ -35,6 +35,8 @@ def menu():
         login()
     elif choice == "3" or choice =="٣":
         area()
+    elif choice == "4" or choice =="٤":
+        above()
     elif choice=="q" or choice=="Q":
         print("Thx for using my script ")
         sys.exit
@@ -139,6 +141,27 @@ def login():
     print("Average Mark :  ",avg_mark)
 
 ########################################################
+
+def above():
+    print("")
+    print("************ above  **************")
+    print("")
+    print("Max 5 Number ")
+    print("")
+
+    con = 0
+
+    for i in range (5):
+        num=input("Enter Numbers :  ")
+        num=float(num)
+
+        if(num >= 70):
+           con = con + 1
+
+    print("the number of student  with marks greater than 70 is " ,con)
+
+
+ ########################################################
 
 def area():
 
